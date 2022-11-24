@@ -3,7 +3,6 @@ import tkinter as tk
 import os
 from PIL import ImageTk, Image
 
-
 root = tk.Tk()
 root.title("ESCAPE THE ROOM")
 root.geometry('780x542')
@@ -26,6 +25,11 @@ buttonpath = os.path.join(r'C:\Users\KooHanSeul\Desktop\room_escape\img\exclamat
 bottom_load = Image.open(buttonpath)
 button_img = ImageTk.PhotoImage(bottom_load)
 
+buttonpath2 = os.path.join(r'C:\Users\KooHanSeul\Desktop\room_escape\img\lock.png')
+
+bottom_load2 = Image.open(buttonpath2)
+button_img2 = ImageTk.PhotoImage(bottom_load2)
+
 # 1. 테이블 버튼
 
 button = tk.Button(root, command = root.quit, anchor = 'w', bg='red', image=button_img, bd=0)
@@ -41,4 +45,10 @@ button_window = canvas.create_window(690, 310, window=button)
 button = tk.Button(root, command = root.quit, anchor = 'w', bg='red', image=button_img, bd=0)
 button_window = canvas.create_window(110, 340, window=button)
 
+# 자물쇠 실행
+
+button = tk.Button(root, command = root.quit, anchor = 'w', bg='black', image=button_img2, bd=0)
+button_window = canvas.create_window(223, 245, window=button)
+
 root.mainloop()
+

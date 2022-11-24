@@ -25,7 +25,7 @@ def explanation():
     tk.messagebox.showinfo("Hint", "Achieve the game goals and get the numbers")
     root.destroy()
     import main # 이래도 되나? 문제 있을지도
-    
+
 
 # 버튼 생성
 buttonpath = os.path.join(r'C:\Users\KooHanSeul\Desktop\room_escape\img\start_button.png')
