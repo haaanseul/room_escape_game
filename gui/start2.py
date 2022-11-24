@@ -6,7 +6,6 @@ from PIL import ImageTk, Image
 
 root = tk.Tk()
 root.title("ESCAPE THE ROOM")
-# root.tk.call('wm', 'geometry', root._w, "545X355")
 root.geometry('545x355')
 root.resizable(width=False, height=False)
 root.wm_attributes("-topmost", 1)
