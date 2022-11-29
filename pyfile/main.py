@@ -1,10 +1,8 @@
 from tkinter import *
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox, ttk
 import os
 from PIL import ImageTk, Image
-from goal import *
-import goal
 from random import *
 
 
@@ -14,48 +12,35 @@ third = 1 # 게임3 return 값
 
 # 랜덤 숫자 합치기
 
+global num
 num = str(first)+str(second)+str(third)
 
-
-
-# 자물쇠
-
 def lock():
-    def pressed():
-        label.configure(text="버튼을 누름")
-
-    def confirm():
-        in_text = "입력 내용 : " + input_text.get()
-        label.configure(text=in_text)
-        
-        return input_text
-
+    def click_btn(n):
+        if input_text.get() == num:
+            root.destroy()
+            import fin
+        else:
+            label.configure(text="retry")
+    
     window = Tk()
     window.title("lock")
     window.geometry('320x120')
-
-    label = Label(window, text="라벨테스트", font=("돋음", 10))
+    
+    label = Label(window, text="INPUT NUMBER AND ENTER")
     label.grid(column=0, row=0)
-
-    button = Button(window, text="버튼테스트", bg="blue", fg="white", command=pressed)
-    button.grid(column=0, row=1)
-
+    
     input_text = Entry(window, width=30)
-    input_text.grid(column=0, row=2)
-
-    button = Button(window, text="확인", command=confirm)
-    button.grid(column=1, row=2)
+    input_text.grid(column=0, row=1)
+    
+    input_text.bind("<Return>", click_btn)
+    
+    # lock_button = Button(window, text="check", command=click_btn(input_text.get()))
+    # lock_button.grid(column=0, row=2)
 
     window.mainloop()
     
-    # 번호 맞나 확인
-    
-    predict = input_text
-    if predict == num:
-        import goal
-    else:
-        pass
-    window.destroy()
+
 
 
 # 창 만들기
