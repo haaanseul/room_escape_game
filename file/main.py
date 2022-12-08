@@ -1,9 +1,14 @@
 from tkinter import *
 import tkinter as tk
-from tkinter import messagebox, ttk
 import os
 from PIL import ImageTk, Image
 from random import *
+
+
+#c파일 불러오기
+
+# import ctypes
+# dllpath = os.path.join('C:/Users/KooHanSeul/Desktop/room_escape/file/mzzbb.so')
 
 
 first = 1 # 게임1 깨면 return 값
@@ -34,9 +39,6 @@ def lock():
     input_text.grid(column=0, row=1)
     
     input_text.bind("<Return>", click_btn)
-    
-    # lock_button = Button(window, text="check", command=click_btn(input_text.get()))
-    # lock_button.grid(column=0, row=2)
 
     window.mainloop()
     
@@ -78,9 +80,9 @@ button_img2 = ImageTk.PhotoImage(bottom_load2)
 
 # 1. 테이블 버튼
 
-button = tk.Button(root, command = root.quit, anchor = 'w', bg='red', image=button_img, bd=0)
+button = tk.Button(root, command = root.quit , anchor = 'w', bg='red', image=button_img, bd=0)
 button_window = canvas.create_window(322, 230, window=button)
-
+# ctypes.cdll.LoadLibrary(dllpath)
 
 # 2. 바구니 버튼
 
