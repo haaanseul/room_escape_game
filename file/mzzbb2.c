@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <conio.h>
 
 char start();
 int card(int);
@@ -10,9 +11,10 @@ int mzzbb_com_first();
 int mzzbb_me_first();
 int mzzbb(int);
 
-void main() {
+int main() {
 
-    int me, com, result=2, result_mzzbb = 2, num;
+    char me_c;
+    int me, com, result = 2, result_mzzbb = 2, num;
 
     // 시작화면
     start();
@@ -24,7 +26,8 @@ void main() {
 
         // 사용자 패 고르기
         printf("1 : ROCK   2 : SCISSORS   3 : PAPER\n");
-        scanf_s("%d", &me);
+        me_c = _getch();
+        me = atoi(&me_c);
         card(me);
 
         // 컴퓨터 랜덤 패 선정
@@ -55,7 +58,7 @@ void main() {
 
 
 // 시작화면
-char start(){
+char start() {
 
     printf(" ___________________________\n");
     printf("|                           |\n");
@@ -78,7 +81,7 @@ char scissors() {
     printf(" /         |\n");
     printf("| SCISSORS |\n");
     printf(" |        /\n");
-    
+
     return 0;
 }
 
@@ -126,7 +129,7 @@ int card(int card_holder) {
 // 시작 - 가위바위보
 int rock_scis_paper(int me, int com) {
 
-    int re=-1;
+    int re = -1;
 
     if (me == 1) {
         switch (com) {
@@ -183,13 +186,16 @@ int rock_scis_paper(int me, int com) {
 
 // 컴퓨터 선공 묵찌빠
 int mzzbb_com_first() {
-    int re2=-1, me, com;
+    int re2 = -1, me, com;
+    char me_c;
+
     printf("Computer First.\n");
 
     printf("1 : ROCK   2 : SCISSORS   3 : PAPER\n");
 
     // 사용자 패 선택
-    scanf_s("%d", &me);
+    me_c = _getch();
+    me = atoi(&me_c);
     card(me);
 
     // 컴퓨터 패 랜덤 선정
@@ -246,13 +252,16 @@ int mzzbb_com_first() {
 // result = 0 컴퓨터 선공
 // result = 1 내가 선공
 int mzzbb_me_first() {
-    int re3=-1, me, com;
+    int re3 = -1, me, com;
+    char me_c;
+
     printf("You First.\n");
 
     printf("1 : ROCK   2 : SCISSORS   3 : PAPER\n");
 
     // 사용자 패 선택
-    scanf_s("%d", &me);
+    me_c = _getch();
+    me = atoi(&me_c);
     card(me);
 
     // 컴퓨터 패 랜덤 선정
@@ -308,7 +317,7 @@ int mzzbb(int result) {
     int result_mzzbb = -1, i = 1;
 
     while (1) {
-        
+
         if (result == 2) {
             return 2;
         }

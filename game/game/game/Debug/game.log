@@ -1,8 +1,0 @@
-﻿  mzzbb2.c
-C:\Users\KooHanSeul\Desktop\room_escape\file\mzzbb2.c(1,1): warning C4828: 파일에 0x181e 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 949).
-C:\Users\KooHanSeul\Desktop\room_escape\file\mzzbb2.c(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-C:\Users\KooHanSeul\Desktop\room_escape\file\mzzbb2.c(31,15): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KooHanSeul\Desktop\room_escape\file\mzzbb2.c(43,15): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\KooHanSeul\Desktop\room_escape\file\mzzbb2.c(46,9): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
-C:\Users\KooHanSeul\Desktop\room_escape\file\mzzbb2.c(294,19): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  game.vcxproj -> C:\Users\KooHanSeul\Desktop\room_escape\game\game\Debug\game.exe
